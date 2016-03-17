@@ -116,24 +116,27 @@
 
 					</section>
 					<section>
-						<ol>
-							<li>Spin up a new SQL server</li>
-							<li><u>Change the connection limit of the SQL server</u></li>
-							<li>Reboot all the things</li>
-							<li>Something else</li>
-						</ol><br />
-						<p class="fragment"><br /><h3>Congratulations!</h3> Your server is now unresponsive for the rest of the day.</p>
+						<p class="fragment">
+							<ol>
+								<li>Spin up a new SQL server</li>
+								<li><u>Change the connection limit of the SQL server</u></li>
+								<li>Reboot all the things</li>
+								<li>Something else</li>
+							</ol>
+						</p>
+						<p class="fragment"><br /><h3 class="fragment" >Congratulations!</h3> <span class="fragment">Your server is now unresponsive for the rest of the day.</span></p>
 					</section>
 
 				</section>
 				<section>
 					<section>
 						<h2>Purpose</h2>
+						<p>The purpose of this talk is...</p>
 						<ul>
-							<li>The purpose of this talk is to avoid situations like that</li>
-							<li class="fragment">To give you an understanding of how to support small to medium size organizations that have the chance to occasionally drive big traffic</li>
-							<li class="fragment">You need to be intimate with your environment to survive, especially when dealing with performance and uptime</li>
-							<li class="fragment">Performance is an ongoing concern that can make or break you</li>
+							<li class="fragment">to avoid situations like that</li>
+							<li class="fragment">to give you an understanding of how to support <u>small to medium size organizations</u> that have the chance to occasionally drive big traffic</li>
+							<li class="fragment">to show you need to be intimate with your environment when dealing with performance and uptime</li>
+							<li class="fragment">to show performance is an ongoing concern that can make or break you</li>
 						</ul>
 					</section>
 					<section>
@@ -168,7 +171,7 @@
 								<li>Minimize external requests</li>
 							</ul>	
 						</li>
-						<li class="fragment">gzip or some backend compression</li>
+						<li class="fragment">Use gzip or some backend compression</li>
 				</section>
 				<section>
 					<section>
@@ -180,22 +183,90 @@
 				<section>
 					<section>
 						<h2>Step 2: Determine what to test</h2>
-					</section>
-					<section>
+						<ul>
+							<li>Common user flows
+							<ul>
+								<li>Browse &rarr; Add to cart &rarr; checkout</li> 
+								<li>Login &rarr; browse &rarr; add to wishlist</li>
+							</ul>
+							</li>
+							<li class="fragment">Custom built pages
+							<ul>
+								<li>Build a wagon</li>
+								<li>Build a tesla</li>
+							</ul>
+							</li>
+							<li class="fragment">"Intense" processes
+							<ul>
+								<li>Migrate API</li>
+								<li>Search large data sets</li>
+							</ul>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Step 3: Test</h2>
+						<p>Just like voting in Chicago <br />
+							<em class="fragment">(Test early and often)</em>
+						</p>
+					</section>
+					<section data-transition="none" >
+						<h2>Mimick Real Behavior</h2>
+						<h3>JMeter / BlazeMeter</h3>
+							<p><img src="img/jmeter-checkout.png" />
+							</p>
+					</section>
+					<section data-transition="none">
+						<h2>Mimick Real Behavior</h2>
+						<h3>JMeter / BlazeMeter</h3>
+							<ul>
+								<li>Make sure your throughput is accurate</li>
+								<li>Use rampup time to identify problems</li>
+								<li>Learn the cool features of jmeter (there are a ton of them)</li>
+								<li>Make use of jmeter variables for easy tweaking</li>
+					</section data-transition="none">
+					<section data-transition="none">
+						<h2>Monitor the Tests With Amazing Tools</h2>
+						<h3>Newrelic </h3>
+							<p><img src="img/nr-example.png" />
+							</p>
+					</section>
+					<section data-transition="none">
+						<h2>Monitor the Tests With Amazing Tools</h2>
+						<h3>Newrelic </h3>
+							<p><img src="img/nr-trace.png" />
+							</p>
 					</section>
 					<section>
-					</section>
+						<h2>Some Other Cool Tools</h2>
+						<ul>
+							<li>Blackfire / Xhprof</li>
+							<li>Pingdom</li>
+							<li>Percona tools</li>
+						</ul>
 				</section>
 				<section>
 					<section>
 						<h2>Step 4: Identify problems and fix them</h2>
+						<ul>
+							<li>Server utilization</li>
+							<li>Network Capacity</li>
+							<li>SQL Exhaustion</li>
 					</section>
 					<section>
+						<h2>Server Utilization</h2>
+						<small>100% CPU / RAM</small>
+						<ul>
+							<li></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Network Usage</h2>
+						<ul>
+							<li>Less common, more deadly</li>
+						</ul>
 					</section>
 				</section>
 
