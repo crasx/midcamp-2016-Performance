@@ -184,7 +184,7 @@
 					<section>
 						<h2>Step 2: Determine what to test</h2>
 						<ul>
-							<li>Common user flows
+							<li>Common user flows / Critical paths
 							<ul>
 								<li>Browse &rarr; Add to cart &rarr; checkout</li> 
 								<li>Login &rarr; browse &rarr; add to wishlist</li>
@@ -209,6 +209,7 @@
 					<section>
 						<h2>Step 3: Test</h2>
 						<p>Just like voting in Chicago <br />
+							<img src="img/chicago.jpg"><br />
 							<em class="fragment">(Test early and often)</em>
 						</p>
 					</section>
@@ -246,33 +247,59 @@
 							<li>Pingdom</li>
 							<li>Percona tools</li>
 						</ul>
+					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Step 4: Identify problems and fix them</h2>
-						<ul>
-							<li>Server utilization</li>
-							<li>Network Capacity</li>
-							<li>SQL Exhaustion</li>
+						<h2>Step 4: Identify problems. <br />Fix them!</h2>
 					</section>
 					<section>
 						<h2>Server Utilization</h2>
-						<small>100% CPU / RAM</small>
 						<ul>
-							<li></li>
+							<li>100% CPU / RAM</li>
+							<li class="fragment">Too much "stuff" on one server</li>
+							<ul>
+								<li class="fragment">Separate it - SQL - NFS - Cache</li>
+								<li class="fragment">Use better caching</li>
+								<li class="fragment">Scale horizontally</li>
+							</ul>
+							<li class="fragment">Try varnish <em>Lots of setup time</em></li>
 						</ul>
+					</section>
+					<section>
+						<img src="img/rfsrv.png" />
 					</section>
 					<section>
 						<h2>Network Usage</h2>
 						<ul>
 							<li>Less common, more deadly</li>
+							<li class="fragment">PHP - opcache</li>
+							<li class="fragment">Monitor your caching</li>
+							<li class="fragment">Delay external requests</li>
+							<li class="fragment">CDN</li>
+						</ul>
+					</section>
+					<section>
+						<h2>SQL Overload</h2>
+						<ul>
+							<li>Cool area of study you could spend a whole career on</li>
+							<li class="fragment">Magento promo codes suck</li>
+							<li class="fragment">Solr lucene, Cassandra, searchapi</li>
+							<li class="fragment">Master/Slave</li>
+							<li class="fragment">Complex databases = complex solution</li>
+							<li class="fragment">Know your limits 
+							<ul>
+								<li class="fragment">We hit 40 checkouts per minute</li>
+							</ul>
 						</ul>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>Step 5: Repeat steps 3 and 4</h2>
+						<h2>Step 5: Done!</h2>
+						<small  class="fragment">Just kidding</small>
+						<h2 class="fragment">GOTO: 3 (Test again)</h2>
 					</section>
 					<section>
 					</section>
