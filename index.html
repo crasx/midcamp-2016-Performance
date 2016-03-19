@@ -101,7 +101,7 @@
 								</caption>
 							</div>
 							<div class="person">
-								<img src="img/Madison.jpg" height="400" /><br />
+								<img src="img/Madisonbeard.jpg" height="400" /><br />
 								<caption>Madison Major<br/>
 									<small>
 										<em>Client Services Director</em><br />
@@ -144,7 +144,15 @@
 								<li>Something else</li>
 							</ol>
 						</p>
-						<p class="fragment"><br /><h3 class="fragment" >Congratulations!</h3> <span class="fragment">Your server is now unresponsive for the rest of the day.</span></p>
+						<p class="fragment"><br /><h3 class="fragment" >Congratulations!</h3> <span class="fragment">Your server is now unresponsive during the most critical time period.</span></p>
+					</section>
+					<section>
+					 <h2>Why should you listen to us?</h2>
+					 <ul>
+					 <li class="fragment">We focus on commerce (authenticated and transactional)</li> 
+					 <li class="fragment">Our sites have transitioned between 60 concurrent users to 10,000 concurrent users in 24 hours. 
+</li> 
+					</ul>
 					</section>
 
 				</section>
@@ -153,32 +161,31 @@
 						<h2>Purpose</h2>
 						<p>The purpose of this talk is...</p>
 						<ul>
-							<li class="fragment">to avoid situations like that</li>
-							<li class="fragment">to provide an understanding of how to support <u>small to medium size organizations</u> that have the opportunity to drive big traffic</li>
-							<li class="fragment">to show you need to be intimate with your environment when dealing with performance and uptime</li>
-							<li class="fragment">to show performance is an ongoing concern that can make or break you</li>
+							<li class="fragment">To avoid situations like that</li>
+							<li class="fragment">To provide an understanding of how to support <u>small to medium size organizations</u> that have the opportunity to drive big traffic</li>
+							<li class="fragment">To show you need to be intimate with your environment when dealing with performance and uptime</li>
+							<li class="fragment">To show performance is an ongoing concern that can make or break you</li>
 						</ul>
 					</section>
 					<section>
 						<h2>What we will be covering</h2>
 						<ul>
-							<li>In general, Ecommerce</li>
+							<li class="fragment" >In general, Ecommerce</li>
 							<li class="fragment">How to create a performance plan</li>
 							<li class="fragment">Valuable testing and optimization tools</li>
 							<li class="fragment">What and when to test</li>
 							<li class="fragment">Analyzing results and optimizing</li>
-							<li class="fragment">Surving the 'big day'</li>
-							<li class="fragment">Optimizing and Repairing in real time </li>
-							<li class="fragment">Plan C (what to do if outage)</li>
+							<li class="fragment">Surviving the 'big day'</li>
+							<li class="fragment">Plan B</li>
+							<li class="fragment">Plan C (Fail in style)</li>
 						</ul>
 					</section>
 
 				</section>	
 				<section>
-					<h2>Some givens about performance</2> 
-					<h3>(aka what this presentation is not about)</h3>
+					<h2>Some givens about performance</h2> 
+					<p>(aka what this presentation is not about)</p>
 					<ul>
-						<li class="fragment"> Minimize your site's footprint </li>
 						<li class="fragment">Cache every layer
 							<ul>
 								<li>Application / Drupal cache</li>
@@ -202,23 +209,21 @@
 						<li> Start Early </li>
 						<li class="fragment">Determine your goals and key metrics</li>
 						<li class="fragment">Determine Budget</li>
-						<li class="fragment">Balance capacity vs. performance vs. availability </li>
+						<li class="fragment"><u>Balance capacity vs. performance vs. availability</u></li>
 						<li class="fragment">Be aware of marketing's calendar</li>
 						<li class="fragment">Train your content editors</li>
-						<li class="fragment">Define both desired user behaviors and high impact behhavior</li>
+						<li class="fragment">Define both desired user behaviors and high impact behavior</li>
 						<li class="fragment">Create a bottleneck list and define alternatives for points of failure </li>
 						<li class="fragment">How will you scale and under what conditions? </li>
 						<li class="fragment">Failing gracefully (aka "Plan C")</li>
 						</ul>	
 					</section>
-					<section>
-					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Step 2: Determine what to test</h2>
+						<h2>Step 2: Determine What To Test</h2>
 						<ul>
-							<li>Common user flows / Critical paths
+							<li class="fragment">Common user flows / Critical paths
 							<ul>
 								<li>Browse &rarr; Add to cart &rarr; checkout</li> 
 								<li>Login &rarr; browse &rarr; add to wishlist</li>
@@ -226,8 +231,7 @@
 							</li>
 							<li class="fragment">Custom built pages
 							<ul>
-								<li>Build a wagon</li>
-								<li>Build a tesla</li>
+								<li>Custom product configuration</li>
 							</ul>
 							</li>
 							<li class="fragment">"Intense" processes
@@ -241,20 +245,20 @@
 				</section>
 				<section>
 					<section>
-						<h2>Step 3: Build it and TEST!</h2>
+						<h2>Step 3: TEST!</h2>
 						<p>Just like voting in Chicago <br />
 							<img src="img/chicago.jpg"><br />
 							<em class="fragment">(Test early and often)</em>
 						</p>
 					</section>
 					<section data-transition="none" >
-						<h2>Mimick Real Behavior</h2>
+						<h2>Simulating Real Behavior</h2>
 						<h3>JMeter / BlazeMeter</h3>
 							<p><img src="img/jmeter-checkout.png" />
 							</p>
 					</section>
 					<section data-transition="none">
-						<h2>Mimick Real Behavior</h2>
+						<h2>Simulating Real Behavior</h2>
 						<h3>JMeter / BlazeMeter</h3>
 							<ul>
 								<li>Make sure your throughput is accurate</li>
@@ -263,13 +267,13 @@
 								<li>Make use of jmeter variables for easy tweaking</li>
 					</section data-transition="none">
 					<section data-transition="none">
-						<h2>Monitor the Tests With Amazing Tools</h2>
+						<h2>Monitor With Amazing Tools</h2>
 						<h3>Newrelic </h3>
 							<p><img src="img/nr-example.png" />
 							</p>
 					</section>
 					<section data-transition="none">
-						<h2>Monitor the Tests With Amazing Tools</h2>
+						<h2>Monitor 	With Amazing Tools</h2>
 						<h3>Newrelic </h3>
 							<p><img src="img/nr-trace.png" />
 							</p>
@@ -277,9 +281,10 @@
 					<section>
 						<h2>Some Other Cool Tools</h2>
 						<ul>
-							<li>Blackfire / Xhprof</li>
-							<li>Pingdom</li>
-							<li>Percona tools</li>
+							<li class="fragment">Blackfire / Xhprof</li>
+							<li class="fragment">Pingdom</li>
+							<li class="fragment">Percona tools</li>
+							<li class="fragment">Native monitoring interfaces</li>
 						</ul>
 					</section>
 				</section>
@@ -290,13 +295,14 @@
 					<section>
 						<h2>Server Utilization</h2>
 						<ul>
-							<li>100% CPU / RAM</li>
+							<li class="fragment">100% CPU / RAM</li>
+							<li class="fragment">Scale vertically</li>
 							<li class="fragment">Too much "stuff" on one server</li>
 							<ul>
 								<li class="fragment">Separate it - SQL - NFS - Cache</li>
-								<li class="fragment">Use better caching</li>
-								<li class="fragment">Scale horizontally</li>
 							</ul>
+							<li class="fragment">Scale horizontally</li>
+							<li class="fragment">Use better caching</li>
 							<li class="fragment">Try varnish <em>Lots of setup time</em></li>
 						</ul>
 					</section>
@@ -306,7 +312,7 @@
 					<section>
 						<h2>Network Usage</h2>
 						<ul>
-							<li>Less common, more deadly</li>
+							<li class="fragment">Less common, more deadly</li>
 							<li class="fragment">PHP - opcache</li>
 							<li class="fragment">Monitor your caching</li>
 							<li class="fragment">Delay external requests</li>
@@ -316,14 +322,14 @@
 					<section>
 						<h2>SQL Overload</h2>
 						<ul>
-							<li>Cool area of study you could spend a whole career on</li>
-							<li class="fragment">Magento promo codes suck</li>
+							<li class="fragment" >Cool area of study you could spend a whole career on</li>
+							<li class="fragment">Poor table design can falter under load</li>
 							<li class="fragment">Solr lucene, Cassandra, searchapi</li>
-							<li class="fragment">Master/Slave</li>
+							<li class="fragment">Master/Slave (write, read)</li>
 							<li class="fragment">Complex databases = complex solution</li>
 							<li class="fragment">Know your limits 
 							<ul>
-								<li class="fragment">We hit 40 checkouts per minute</li>
+								<li class="fragment">Less than 100 checkouts per minute under load</li>
 							</ul>
 						</ul>
 					</section>
@@ -335,59 +341,79 @@
 						<small  class="fragment">Just kidding</small>
 						<h2 class="fragment">GOTO: 3 (Test again)</h2>
 					</section>
-					<section>
-					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Make checklists & document process</h2>
-						<h3>Automate where time and budget allow</h3>
+						<h2>Make Checklists & Document Process</h2>
+						<p>Automate where time and budget allow</p>
+						<ul>
 						<li class="fragment">Steps to prepare and conduct a load test</li>
 						<li class="fragment">Process for scaling of each resource</li>
 						<li class="fragment">Steps to troubleshoot</li>
 						<li class="fragment">System configs</li>
-					</section>
-					<section>
+						</ul>
 					</section>
 				</section>
 				<section>
+					<section>
+							<h2>Plan B</h2>
+							<ul>
+								<li class="fragment">Know your limits</li>
+								<li class="fragment">Flash sale - static site</li>
+								<li class="fragment">Have alternate 3rd party integrations</li>
+
+							</ul>
+					</section>
+					<section>
 						<h2>Plan C</h2>
+						<p>Fail <em>With style</em></p>
+						<img src="img/buzz.gif" height=200 />
 						<ul>
-						<li class="fragment">Know your limits</li>
-						<li class="fragment"> Can't support the load? - More CDN </li>
 						<li class="fragment"> Don't freak out: capture data, even during an outage </li>
 						<li class="fragment"> Pre-plan a customer and communication strategy for outages </li>
 						</ul>
+					</section>
 				</section>
-				<section> 
-					<h2>Test </h2>
-				</section>
+				<section>
+					<h2>Surprises and GOTCHAS!</h2>
+					<ul>
+					<li class="fragment"> Testing filled (db stored) logs, slowing down server</li>
+					<li class="fragment"> Synthetic tests do not always match human behavior </li>
+					<li class="fragment"> Version upgrades matter and so do code changes</li>
+					<li class="fragment"> Optimized config ran fast under load but poorly under regular traffic </li>
+					<li class="fragment"> Sometimes third party integrations can’t keep up </li>
+					<li class="fragment"> Did we just max out our internal bandwidth? </li>
+					<li class="fragment"> Configuration management is difficult </li>  
+					</ul>
+					</section>
 					<section>
 						<h2>Surprises and GOTCHAS!</h2>
 						<ul>
-						<li class="fragment"> Testing filled (db stored) logs, slowing down server</li>
-						<li class="fragment"> Synthetic tests do not always match human behavior </li>
-						<li class="fragment"> Version upgrades matter and so do code changes</li>
-						<li class="fragment"> Optimized config ran fast under load but poorly under regular traffic </li>
-						<li class="fragment"> Sometimes third party integrations can’t keep up </li>
-						<li class="fragment"> Did we just max out our internal bandwidth? </li>
-						<li class="fragment"> Configuration management is difficult </li>
-						<li class="fragment"> YMMV with autoscaling </li>
-						<li class="fragment"> Do NOT execute impactful processses during high load</li>
-						<li class="fragment"> Disable non critical integrations </li>
-						<li class="fragment"> Noisy neighbors have never been THE issue </li>
-						<li class="fragment"> Don’t forget about security </li>
-						</ul>	
-					</section>
-					<section>
-						<h2> Questions???</h2>
-					</section>
-					<section>
-						<h2> Conclusion </h2>
-					</section>
-					<section> 
-						<h2> Thank You </h2> 
-					</section> 
+					
+					<li class="fragment"> YMMV with autoscaling </li>
+					<li class="fragment"> Do NOT execute impactful processses during high load</li>
+					<li class="fragment"> Disable non critical integrations </li>
+					<li class="fragment"> Noisy neighbors have never been THE issue </li>
+					<li class="fragment"> Don’t forget about security </li>
+					</ul>	
+				</section>
+				<section>
+					<h2> Questions???</h2>
+				</section>
+				<section>
+					<h2> Conclusion </h2>
+					<ul>
+						<li class="fragment">Be intimate with your environment</li>
+						<li class="fragment">Engage stakeholders in performance planning</li>
+						<li class="fragment">Engage stakeholders in performance planning</li>
+
+					</ul>
+				</section>
+				<section> 
+					<h2> Thank You </h2> 
+					<p>Go sprint! <em>With style</em></p>
+					<p>https://legacy.joind.in/17258</p>
+				</section> 
 						
 				<!-- Example of nested vertical slides -->
 				<section>
